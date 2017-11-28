@@ -1,0 +1,405 @@
+2017-11-28 02:18:08 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'humhub'' in /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', '', '', NULL)
+#1 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(824): yii\db\Schema->quoteValue('user')
+#6 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('user')
+#7 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(866): yii\db\Command->getRawSql()
+#8 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(887): yii\db\Command->logQuery('yii\\db\\Command:...')
+#9 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#10 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#11 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(135): yii\db\Query->all(NULL)
+#12 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/libs/BaseSettingsManager.php(167): yii\db\ActiveQuery->all()
+#13 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/libs/BaseSettingsManager.php(47): humhub\libs\BaseSettingsManager->loadValues()
+#14 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\libs\BaseSettingsManager->init()
+#15 [internal function]: yii\base\Object->__construct(Array)
+#16 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#17 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('humhub\\componen...', Array, Array)
+#18 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('humhub\\componen...', Array, Array)
+#19 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#20 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(73): yii\di\ServiceLocator->get('settings')
+#21 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/modules/user/components/User.php(182): yii\di\ServiceLocator->__get('settings')
+#22 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/widgets/TopMenu.php(41): humhub\modules\user\components\User::isGuestAccessEnabled()
+#23 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\widgets\TopMenu->init()
+#24 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/widgets/BaseMenu.php(316): yii\base\Object->__construct()
+#25 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/components/Controller.php(284): humhub\widgets\BaseMenu::setViewState()
+#26 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/components/Controller.php(204): humhub\components\Controller->setJsViewStatus()
+#27 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#28 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('go', Array)
+#29 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('installer/index...', Array)
+#30 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#31 /Applications/MAMP/htdocs/humhub-1.2.3/index.php(25): yii\base\Application->run()
+#32 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'humhub'' in /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(824): yii\db\Schema->quoteValue('user')
+#4 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('user')
+#5 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(866): yii\db\Command->getRawSql()
+#6 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(887): yii\db\Command->logQuery('yii\\db\\Command:...')
+#7 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#9 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(135): yii\db\Query->all(NULL)
+#10 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/libs/BaseSettingsManager.php(167): yii\db\ActiveQuery->all()
+#11 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/libs/BaseSettingsManager.php(47): humhub\libs\BaseSettingsManager->loadValues()
+#12 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\libs\BaseSettingsManager->init()
+#13 [internal function]: yii\base\Object->__construct(Array)
+#14 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#15 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('humhub\\componen...', Array, Array)
+#16 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('humhub\\componen...', Array, Array)
+#17 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#18 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(73): yii\di\ServiceLocator->get('settings')
+#19 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/modules/user/components/User.php(182): yii\di\ServiceLocator->__get('settings')
+#20 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/widgets/TopMenu.php(41): humhub\modules\user\components\User::isGuestAccessEnabled()
+#21 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\widgets\TopMenu->init()
+#22 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/widgets/BaseMenu.php(316): yii\base\Object->__construct()
+#23 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/components/Controller.php(284): humhub\widgets\BaseMenu::setViewState()
+#24 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/components/Controller.php(204): humhub\components\Controller->setJsViewStatus()
+#25 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('go', Array)
+#27 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('installer/index...', Array)
+#28 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#29 /Applications/MAMP/htdocs/humhub-1.2.3/index.php(25): yii\base\Application->run()
+#30 {main}
+Additional Information:
+
+2017-11-28 02:18:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'installer/index/go'
+    '_pjax' => '#layout-content'
+    '_' => '1511831873657'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:57.0) Gecko/20100101 Firefox/57.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub-1.2.3/index.php?r=installer%2Findex'
+    'HTTP_X_CSRF_TOKEN' => 'pH-yixLoRZIvwlttmqDNPu0_XKc0SdGOF12EyMuiP2AyWyOwJOSjvPzDu-cimGXPEaIv2rs_nABAX6ygPE8nxQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'Pycharm-3eb1b568=864c8382-42c4-4bd3-9498-3c9e72a833c1; _csrf=dbe14893921c5f23203099c97c3ff0d39f8bb28b9523d640a4c2f6062f64dfd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%96%24%91%3B6%0C%E6.%D3%01%E0%8A%B88%A8%F1%FC%9Ds%7D%8FvM%8EW%02%28h%F7%ED%18%A5%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/humhub-1.2.3/index.php'
+    'REMOTE_PORT' => '56174'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1511831873657'
+    'REQUEST_URI' => '/humhub-1.2.3/index.php?r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1511831873657'
+    'SCRIPT_NAME' => '/humhub-1.2.3/index.php'
+    'PHP_SELF' => '/humhub-1.2.3/index.php'
+    'REQUEST_TIME_FLOAT' => 1511831888.01
+    'REQUEST_TIME' => 1511831888
+    'argv' => [
+        0 => 'r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1511831873657'
+    ]
+    'argc' => 1
+]
+2017-11-28 02:18:08 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\DbTarget: Exception (Database Exception) 'yii\db\Exception' with message 'SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'humhub'' 
+
+in /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php:584
+
+Stack trace:
+#0 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(824): yii\db\Schema->quoteValue('yii\\db\\Exceptio...')
+#4 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('yii\\db\\Exceptio...')
+#5 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(866): yii\db\Command->getRawSql()
+#6 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->logQuery('yii\\db\\Command:...')
+#7 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/log/DbTarget.php(89): yii\db\Command->execute()
+#8 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/log/Target.php(124): yii\log\DbTarget->export()
+#9 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\log\Target->collect(Array, true)
+#10 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#11 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/ErrorHandler.php(113): yii\log\Logger->flush(true)
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#13 {main}
+2017-11-28 02:18:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'installer/index/go'
+    '_pjax' => '#layout-content'
+    '_' => '1511831873657'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:57.0) Gecko/20100101 Firefox/57.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub-1.2.3/index.php?r=installer%2Findex'
+    'HTTP_X_CSRF_TOKEN' => 'pH-yixLoRZIvwlttmqDNPu0_XKc0SdGOF12EyMuiP2AyWyOwJOSjvPzDu-cimGXPEaIv2rs_nABAX6ygPE8nxQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'Pycharm-3eb1b568=864c8382-42c4-4bd3-9498-3c9e72a833c1; _csrf=dbe14893921c5f23203099c97c3ff0d39f8bb28b9523d640a4c2f6062f64dfd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%96%24%91%3B6%0C%E6.%D3%01%E0%8A%B88%A8%F1%FC%9Ds%7D%8FvM%8EW%02%28h%F7%ED%18%A5%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/humhub-1.2.3/index.php'
+    'REMOTE_PORT' => '56174'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1511831873657'
+    'REQUEST_URI' => '/humhub-1.2.3/index.php?r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1511831873657'
+    'SCRIPT_NAME' => '/humhub-1.2.3/index.php'
+    'PHP_SELF' => '/humhub-1.2.3/index.php'
+    'REQUEST_TIME_FLOAT' => 1511831888.01
+    'REQUEST_TIME' => 1511831888
+    'argv' => [
+        0 => 'r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1511831873657'
+    ]
+    'argc' => 1
+]
+2017-11-28 02:23:40 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'humhub'' in /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', '', '', NULL)
+#1 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(824): yii\db\Schema->quoteValue('user')
+#6 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('user')
+#7 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(866): yii\db\Command->getRawSql()
+#8 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(887): yii\db\Command->logQuery('yii\\db\\Command:...')
+#9 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#10 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#11 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(135): yii\db\Query->all(NULL)
+#12 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/libs/BaseSettingsManager.php(167): yii\db\ActiveQuery->all()
+#13 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/libs/BaseSettingsManager.php(47): humhub\libs\BaseSettingsManager->loadValues()
+#14 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\libs\BaseSettingsManager->init()
+#15 [internal function]: yii\base\Object->__construct(Array)
+#16 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#17 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('humhub\\componen...', Array, Array)
+#18 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('humhub\\componen...', Array, Array)
+#19 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#20 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(73): yii\di\ServiceLocator->get('settings')
+#21 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/modules/user/components/User.php(182): yii\di\ServiceLocator->__get('settings')
+#22 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/widgets/TopMenu.php(41): humhub\modules\user\components\User::isGuestAccessEnabled()
+#23 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\widgets\TopMenu->init()
+#24 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/widgets/BaseMenu.php(316): yii\base\Object->__construct()
+#25 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/components/Controller.php(284): humhub\widgets\BaseMenu::setViewState()
+#26 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/components/Controller.php(204): humhub\components\Controller->setJsViewStatus()
+#27 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#28 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('database', Array)
+#29 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('installer/setup...', Array)
+#30 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#31 /Applications/MAMP/htdocs/humhub-1.2.3/index.php(25): yii\base\Application->run()
+#32 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'humhub'' in /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(824): yii\db\Schema->quoteValue('user')
+#4 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('user')
+#5 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(866): yii\db\Command->getRawSql()
+#6 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(887): yii\db\Command->logQuery('yii\\db\\Command:...')
+#7 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#9 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(135): yii\db\Query->all(NULL)
+#10 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/libs/BaseSettingsManager.php(167): yii\db\ActiveQuery->all()
+#11 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/libs/BaseSettingsManager.php(47): humhub\libs\BaseSettingsManager->loadValues()
+#12 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\libs\BaseSettingsManager->init()
+#13 [internal function]: yii\base\Object->__construct(Array)
+#14 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#15 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('humhub\\componen...', Array, Array)
+#16 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('humhub\\componen...', Array, Array)
+#17 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#18 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(73): yii\di\ServiceLocator->get('settings')
+#19 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/modules/user/components/User.php(182): yii\di\ServiceLocator->__get('settings')
+#20 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/widgets/TopMenu.php(41): humhub\modules\user\components\User::isGuestAccessEnabled()
+#21 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\widgets\TopMenu->init()
+#22 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/widgets/BaseMenu.php(316): yii\base\Object->__construct()
+#23 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/components/Controller.php(284): humhub\widgets\BaseMenu::setViewState()
+#24 /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/components/Controller.php(204): humhub\components\Controller->setJsViewStatus()
+#25 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('database', Array)
+#27 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('installer/setup...', Array)
+#28 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#29 /Applications/MAMP/htdocs/humhub-1.2.3/index.php(25): yii\base\Application->run()
+#30 {main}
+Additional Information:
+
+2017-11-28 02:23:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'installer/setup/database'
+    '_pjax' => '#layout-content'
+    '_' => '1511831889172'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:57.0) Gecko/20100101 Firefox/57.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub-1.2.3/index.php?r=installer%2Fsetup%2Fprerequisites'
+    'HTTP_X_CSRF_TOKEN' => '-3jvpT7WY6DmKf53BN8UhKeXM-q_8ndV4nOIHMETgnJtXH6eCNqFjjUoHv2857x1WwpAlzCEOtu1caB0Nv6a1w=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'Pycharm-3eb1b568=864c8382-42c4-4bd3-9498-3c9e72a833c1; _csrf=dbe14893921c5f23203099c97c3ff0d39f8bb28b9523d640a4c2f6062f64dfd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%96%24%91%3B6%0C%E6.%D3%01%E0%8A%B88%A8%F1%FC%9Ds%7D%8FvM%8EW%02%28h%F7%ED%18%A5%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/humhub-1.2.3/index.php'
+    'REMOTE_PORT' => '56351'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1511831889172'
+    'REQUEST_URI' => '/humhub-1.2.3/index.php?r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1511831889172'
+    'SCRIPT_NAME' => '/humhub-1.2.3/index.php'
+    'PHP_SELF' => '/humhub-1.2.3/index.php'
+    'REQUEST_TIME_FLOAT' => 1511832220.14
+    'REQUEST_TIME' => 1511832220
+    'argv' => [
+        0 => 'r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1511831889172'
+    ]
+    'argc' => 1
+]
+2017-11-28 02:23:40 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\DbTarget: Exception (Database Exception) 'yii\db\Exception' with message 'SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'humhub'' 
+
+in /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php:584
+
+Stack trace:
+#0 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Connection.php(824): yii\db\Schema->quoteValue('yii\\db\\Exceptio...')
+#4 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('yii\\db\\Exceptio...')
+#5 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(866): yii\db\Command->getRawSql()
+#6 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->logQuery('yii\\db\\Command:...')
+#7 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/log/DbTarget.php(89): yii\db\Command->execute()
+#8 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/log/Target.php(124): yii\log\DbTarget->export()
+#9 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\log\Target->collect(Array, true)
+#10 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#11 /Applications/MAMP/htdocs/humhub-1.2.3/protected/vendor/yiisoft/yii2/base/ErrorHandler.php(113): yii\log\Logger->flush(true)
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#13 {main}
+2017-11-28 02:23:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'installer/setup/database'
+    '_pjax' => '#layout-content'
+    '_' => '1511831889172'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:57.0) Gecko/20100101 Firefox/57.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub-1.2.3/index.php?r=installer%2Fsetup%2Fprerequisites'
+    'HTTP_X_CSRF_TOKEN' => '-3jvpT7WY6DmKf53BN8UhKeXM-q_8ndV4nOIHMETgnJtXH6eCNqFjjUoHv2857x1WwpAlzCEOtu1caB0Nv6a1w=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'Pycharm-3eb1b568=864c8382-42c4-4bd3-9498-3c9e72a833c1; _csrf=dbe14893921c5f23203099c97c3ff0d39f8bb28b9523d640a4c2f6062f64dfd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%96%24%91%3B6%0C%E6.%D3%01%E0%8A%B88%A8%F1%FC%9Ds%7D%8FvM%8EW%02%28h%F7%ED%18%A5%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/humhub-1.2.3/index.php'
+    'REMOTE_PORT' => '56351'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1511831889172'
+    'REQUEST_URI' => '/humhub-1.2.3/index.php?r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1511831889172'
+    'SCRIPT_NAME' => '/humhub-1.2.3/index.php'
+    'PHP_SELF' => '/humhub-1.2.3/index.php'
+    'REQUEST_TIME_FLOAT' => 1511832220.14
+    'REQUEST_TIME' => 1511832220
+    'argv' => [
+        0 => 'r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1511831889172'
+    ]
+    'argc' => 1
+]
+2017-11-28 02:31:41 [127.0.0.1][3][93f4b23e8f8e195c8e6aa761b736a560][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot use yii\base\Event as Event because the name is already in use' in /Applications/MAMP/htdocs/humhub-1.2.3/protected/humhub/components/Widget.php:12
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-11-28 02:31:39 [127.0.0.1][3][93f4b23e8f8e195c8e6aa761b736a560][info][application] $_GET = [
+    'r' => 'installer/config/sample-data'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:57.0) Gecko/20100101 Firefox/57.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub-1.2.3/index.php?r=installer%2Fconfig%2Fsample-data'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '164'
+    'HTTP_COOKIE' => 'Pycharm-3eb1b568=864c8382-42c4-4bd3-9498-3c9e72a833c1; _csrf=dbe14893921c5f23203099c97c3ff0d39f8bb28b9523d640a4c2f6062f64dfd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%96%24%91%3B6%0C%E6.%D3%01%E0%8A%B88%A8%F1%FC%9Ds%7D%8FvM%8EW%02%28h%F7%ED%18%A5%22%3B%7D; PHPSESSID=53cd5f039caa2099fedd27bd8629eafe'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/humhub-1.2.3/index.php'
+    'REMOTE_PORT' => '56499'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=installer%2Fconfig%2Fsample-data'
+    'REQUEST_URI' => '/humhub-1.2.3/index.php?r=installer%2Fconfig%2Fsample-data'
+    'SCRIPT_NAME' => '/humhub-1.2.3/index.php'
+    'PHP_SELF' => '/humhub-1.2.3/index.php'
+    'REQUEST_TIME_FLOAT' => 1511832699.24
+    'REQUEST_TIME' => 1511832699
+    'argv' => [
+        0 => 'r=installer%2Fconfig%2Fsample-data'
+    ]
+    'argc' => 1
+]
